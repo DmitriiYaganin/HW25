@@ -72,13 +72,10 @@ def get_comments_by_post_id(post_id):
     """
     file_with_comments = _open_comments()
     comments = []
-    if post_id <= _count_posts():
-        for i in range(len(file_with_comments)):
-            if file_with_comments[i]['post_id'] == post_id:
-                comments.append(file_with_comments[i])
-        return comments
-
-    raise ValueError("Post not found")
+    for i in range(len(file_with_comments)):
+        if file_with_comments[i]['post_id'] == post_id:
+            comments.append(file_with_comments[i])
+    return comments
 
 
 def search_for_posts(query):

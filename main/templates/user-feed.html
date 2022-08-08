@@ -36,8 +36,9 @@
             <span class="item__username">{{post_for_username.poster_name}}</span>
           </a>
         </div>
-        <a href="/main/templates/post.html/post.html" class="item__post-link">
-          <img src="{{post_for_username.pic}}" alt="" width="348" class="item__post-img">
+        <!-- Вот тут не поправил, а щас поправил -->
+        <a href="/posts/" class="item__post-link">
+          <img src="{{post_for_username.pk}}" alt="" width="348" class="item__post-img">
         </a>
         <p class="item__descr"><a href="#" class="item__tag">#food</a> {{post_for_username.content}}</p>
         <div class="item__post-info">
@@ -47,7 +48,8 @@
           </div>
         </div>
         <div class="item__post-bottom">
-          <a href="/main/templates/post.html/post.html" class="item__btn-more">Подробнее</a>
+          <!-- Вот тут тоже не поправил-->
+          <a href="/posts/{{post_for_username.pk}}" class="item__btn-more">Подробнее</a>
           <button type="button" class="item__bookmark-btn">
             <img src="../../static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>
