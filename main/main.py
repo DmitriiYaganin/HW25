@@ -33,9 +33,9 @@ def post_page(postid):
 # @main_blueprint.route('/search', methods=['POST', 'GET'])
 # def search_posts():
 #
-@main_blueprint.route('/results', methods=['POST', 'GET'])
+@main_blueprint.route('/results/', methods=['POST', 'GET'])
 def page_search_results():
-    answer = request.args.get('query')
+    answer = request.values.get('query')
     post_results = search_for_posts(answer)
     len_post_results = len(post_results)
     return render_template('search-results.html', post_results=post_results, len_post_results=len_post_results)
