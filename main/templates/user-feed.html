@@ -24,9 +24,10 @@
     </div>
   </header>
 
-  {% for post_for_username in post_for_usernames %}
   <main class="container">
     <section class="items">
+      <!-- не с того места начал цикл -->
+      {% for post_for_username in post_for_usernames %}
       <div class="items__item item">
         <div class="item__top">
           <a href="/users/{{post_for_username.poster_name}}" class="item__head">
