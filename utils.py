@@ -109,6 +109,7 @@ def for_views():
 
     return 25
 
+
 def api_posts_page():
     with open('data/data.json', "r", encoding="utf-8") as f:
         post_data = json.load(f)
