@@ -1,6 +1,6 @@
 [Unit]
 Description=Flask app service
-After=Network.target
+After=network.target
 
 [Service]
 WorkingDirectory=/home/diaganin/HW25
