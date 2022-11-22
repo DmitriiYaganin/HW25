@@ -1,5 +1,3 @@
-import logging
-
 from flask import Flask, render_template
 
 from main.main import main_blueprint
@@ -19,6 +17,5 @@ def page_enternal(e):
     return render_template('page500.html'), 500
 
 
-if __name__ == "__main__":
+app.run(debug=True, host='0.0.0.0')
 
-    app.run(debug=True)
