@@ -7,7 +7,7 @@ services:
     ports:
       - 80:80
   pg:
-    image: postgres:latest
+    image: postgres
     entrypoint:
       - POSTGRES_USER=db_user
       - POSTGRES_PASSWORD=db_password
