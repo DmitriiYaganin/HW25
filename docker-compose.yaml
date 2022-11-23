@@ -1,15 +1,12 @@
 version: '3.3'
 
 services:
-  api:
-    build:
-      context: .
-    ports:
-      - 80:80
-  pg:
+  app:
+    image: skypro_test
+  pd:
     image: postgres
     entrypoint:
-      - POSTGRES_USER=db_user
+      - POSTGRES_USER=${{DB_NAME}}
       - POSTGRES_PASSWORD=db_password
       - POSTGRES_DB=flask_app
     ports:
